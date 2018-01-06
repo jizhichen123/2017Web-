@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="meavn_webapp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/meavn_webapp_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="meavn_webapp" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="meavn_webapp/web/Web" />
+    </root>
+  </artifact>
+</component>
