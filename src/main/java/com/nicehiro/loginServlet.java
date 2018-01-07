@@ -39,9 +39,10 @@ public class loginServlet implements javax.servlet.Servlet {
         // 构建数据库对象
         DBUtil db = new DBUtil();
         boolean bLogin = db.loginSuccess(username, password);
+        System.out.println(bLogin);
 
         if (bLogin) {
-            response.sendRedirect("index.html");
+            response.sendRedirect("backend.html");
         } else {
             response.sendRedirect("login.jsp");
         }
