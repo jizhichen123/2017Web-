@@ -23,9 +23,8 @@ public class DBUtil {
         return connection;
     }
 
-    public boolean loginSuccess(String userName, String password) {
-        boolean returnValue = false;
-        String sql = "select * from students";
+    private Roles searchInDB(String sql, String userName, String password, String nameField, String pwdField) {
+        String returnValue = "anonymous";
         Connection connection = null;
         Statement statement = null;
         ResultSet rs = null;
@@ -35,19 +34,40 @@ public class DBUtil {
             statement = connection.createStatement();
             rs = statement.executeQuery(sql);
             while (rs.next()) {
-                String userNameInDB = rs.getString("student_id");
-                String passwordInDB = rs.getString("password");
+                String userNameInDB = rs.getString(nameField);
+                String passwordInDB = rs.getString(pwdField);
+                String sysRoleInDB = rs.getString("sys_role");
                 if (userNameInDB.equals(userName) &&
                         (passwordInDB.equals(password))) {
-                    returnValue = true;
+                    returnValue = sysRoleInDB;
+                    break;
                 }
-                break;
             }
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         }
-        return returnValue;
+
+        System.out.println(returnValue);
+
+        if (returnValue.equals("student"))
+            return Roles.Student;
+        else if (returnValue.equals("teacher"))
+            return Roles.Teacher;
+        else return Roles.Anonymous;
+    }
+
+    public Roles loginSuccess(String userName, String password) {
+        String searchStuSQL = "select * from students";
+        String searchTeaSQL = "select * from teachers";
+
+        Roles returnValue = searchInDB(searchStuSQL, userName, password, "student_id", "password");
+
+        if (returnValue.equals(Roles.Anonymous))
+            return searchInDB(searchTeaSQL, userName, password, "teacher_id", "password");
+        else
+            return returnValue;
+
     }
 }

@@ -38,11 +38,12 @@ public class loginServlet implements javax.servlet.Servlet {
         String password = request.getParameter("password");
         // 构建数据库对象
         DBUtil db = new DBUtil();
-        boolean bLogin = db.loginSuccess(username, password);
-        System.out.println(bLogin);
+        Roles role = db.loginSuccess(username, password);
 
-        if (bLogin) {
-            response.sendRedirect("backend.html");
+        if (role.equals(Roles.Student)) {
+            response.sendRedirect("backend_student.html");
+        } else if (role.equals(Roles.Teacher)) {
+            response.sendRedirect("backend_teacher.html");
         } else {
             response.sendRedirect("login.jsp");
         }
