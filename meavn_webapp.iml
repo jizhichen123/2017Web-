@@ -28,5 +28,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="tomcat8" level="project" />
+    <orderEntry type="library" name="Maven: com.alibaba:fastjson:1.2.44" level="project" />
   </component>
 </module>

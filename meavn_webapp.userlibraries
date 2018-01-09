@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="tomcat8">
+    <archive path="/usr/share/java/tomcat8/ecj.jar" />
+    <archive path="/usr/share/java/tomcat8/el-api.jar" />
+    <archive path="/usr/share/java/tomcat8/jasper.jar" />
+    <archive path="/usr/share/java/tomcat8/jsp-api.jar" />
+    <archive path="/usr/share/java/tomcat8/catalina.jar" />
+    <archive path="/usr/share/java/tomcat8/jasper-el.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-api.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-jni.jar" />
+    <archive path="/usr/share/java/tomcat8/catalina-ha.jar" />
+    <archive path="/usr/share/java/tomcat8/servlet-api.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-dbcp.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-jdbc.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-util.jar" />
+    <archive path="/usr/share/java/tomcat8/catalina-ant.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-coyote.jar" />
+    <archive path="/usr/share/java/tomcat8/websocket-api.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-i18n-es.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-i18n-fr.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-i18n-ja.jar" />
+    <archive path="/usr/share/java/tomcat8/annotations-api.jar" />
+    <archive path="/usr/share/java/tomcat8/catalina-tribes.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-util-scan.jar" />
+    <archive path="/usr/share/java/tomcat8/tomcat-websocket.jar" />
+    <archive path="/usr/share/java/tomcat8/catalina-storeconfig.jar" />
+  </library>
+</eclipse-userlibraries>
+

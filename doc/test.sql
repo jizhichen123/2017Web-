@@ -64,8 +64,13 @@ create table `laboratory` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(20) NOT NULL default 'Laboratory Temp',
   `remark` varchar(200) default null,
+  `apparatus` varchar(20) default null,
+  `capacity` int(50) not null default 0,
+  `Email` varchar(20) default null,
+  `Phone` varchar(20) default null,
   primary key (`id`)
 ) engine=InnoDB default charset=utf8;
+
 
 DROP TABLE IF EXISTS `news`;
 

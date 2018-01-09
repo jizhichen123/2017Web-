@@ -11,10 +11,16 @@
     <title>登录</title>
 </head>
 <body>
-<form action="login" method="post">
-    学工号：<input name="username" type="text"/><br/>
-    密码：<input name="password" type="password"/><br/>
-    <input type="submit" value="提交"/>
-</form>
+
+<br/>
+<h2 align="center">登录</h2>
+<div class="loginForm" align="center">
+    <form action="login" method="post">
+        学工号：<input name="username" type="text"/><br/>
+        密码：<input name="password" type="password"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</div>
+
 </body>
 </html>
